@@ -55,16 +55,6 @@ a#mosaic:hover {
   background-position: bottom;
 }
 
-a#hoverbox{
-  background: url("buttons/hoverbox.png") top;
-  width: 72px !important;
-  height: 27px !important;
-  display: block;
-}
-a#hoverbox:hover {
-  background-position: bottom;
-}
-
 a#calendar{
   background: url("buttons/calendar.png") top;
   width: 70px !important;
@@ -83,19 +73,6 @@ a#about{
 }
 a#about:hover {
   background-position: bottom;
-}
-
-
-
-
-
-.grid #grid,
-.trash #trash,
-.mosaic #mosaic,
-.about #about,
-.calendar #calendar {
-  border-color: #555;
-  color: #e70;
 }
 
 /* ???? */
