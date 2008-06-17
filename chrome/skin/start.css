@@ -30,17 +30,64 @@ body {
 }
 
 #views a {
-  border: 1px solid #aaa;
-  text-decoration: none;
-  color: #08f;
-  background: white;
-  padding: 4px;
+  padding: 0;
+  display: block;
+  float: left;
 }
 
-#views a:hover {
-  border-color: #888;
-  color: #f80;
+a#grid {
+  background: url("buttons/grid.png") top;
+  width: 44px !important;
+  height: 27px !important;
+  display: block;
 }
+a#grid:hover {
+  background-position: bottom;
+}
+
+a#mosaic{
+  background: url("buttons/mosaic.png") top;
+  width: 55px !important;
+  height: 27px !important;
+  display: block;
+}
+a#mosaic:hover {
+  background-position: bottom;
+}
+
+a#hoverbox{
+  background: url("buttons/hoverbox.png") top;
+  width: 72px !important;
+  height: 27px !important;
+  display: block;
+}
+a#hoverbox:hover {
+  background-position: bottom;
+}
+
+a#calendar{
+  background: url("buttons/calendar.png") top;
+  width: 70px !important;
+  height: 27px !important;
+  display: block;
+}
+a#calendar:hover {
+  background-position: bottom;
+}
+
+a#about{
+  background: url("buttons/about.png") top;
+  width: 50px !important;
+  height: 27px !important;
+  display: block;
+}
+a#about:hover {
+  background-position: bottom;
+}
+
+
+
+
 
 .grid #grid,
 .trash #trash,
