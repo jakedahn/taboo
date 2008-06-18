@@ -9,12 +9,11 @@ body {
 /* header: search/view selection */
 
 #header {
-  position: fixed;
-  z-index: 1000;
-  background: #ccc;
-  padding: 7px 0;
-  width: 100%;
-  border-bottom: 1px solid #888;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: -30px;
 }
 
 #search {
@@ -27,16 +26,19 @@ body {
 #views {
   float: right;
   margin-right: 10px;
+  margin-top: -29px;
 }
 
 #views a {
   padding: 0;
-  display: block;
+
   float: left;
 }
 
+a#grid img {border: none !important;}
+
 a#grid {
-  background: url("buttons/grid.png") top;
+  background: url("grid.png") top;
   width: 44px !important;
   height: 27px !important;
   display: block;
@@ -46,7 +48,7 @@ a#grid:hover {
 }
 
 a#mosaic{
-  background: url("buttons/mosaic.png") top;
+  background: url("mosaic.png") top;
   width: 55px !important;
   height: 27px !important;
   display: block;
@@ -56,7 +58,7 @@ a#mosaic:hover {
 }
 
 a#calendar{
-  background: url("buttons/calendar.png") top;
+  background: url("calendar.png") top;
   width: 70px !important;
   height: 27px !important;
   display: block;
@@ -66,12 +68,22 @@ a#calendar:hover {
 }
 
 a#about{
-  background: url("buttons/about.png") top;
+  background: url("about.png") top;
   width: 50px !important;
   height: 27px !important;
   display: block;
 }
 a#about:hover {
+  background-position: bottom;
+}
+
+a#trash {
+  background: url("trash.png") top;
+  height: 52px;
+  width: 52px;
+  margin-top: -23px;
+}
+a#trash:hover {
   background-position: bottom;
 }
 
@@ -82,7 +94,7 @@ a#about:hover {
   visibility: hidden;
   padding: 3px 10px;
   margin: 0 auto 10px auto;
-  background: #ee2;
+  background: #731926;
   -moz-border-radius: 5px;
 }
 
@@ -91,7 +103,8 @@ a#about:hover {
 }
 
 #undelete a {
-  color: #000;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #undelete div {
