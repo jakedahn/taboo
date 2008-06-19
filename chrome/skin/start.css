@@ -31,7 +31,6 @@ body {
 
 #views a {
   padding: 0;
-
   float: left;
 }
 
@@ -87,7 +86,7 @@ a#trash:hover {
   background-position: bottom;
 }
 
-/* ???? */
+/* deletion notification */
 
 .infoWrap {
   text-align: center;
