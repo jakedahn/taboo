@@ -1,1 +1,35 @@
-hosnap test 1, 2
+visualization - mosaic view   - http://www.coverpop.com/pop/indie/
+support drag and drop into bookmarkbar/... (dnd flavors)
+
+fix https://bugzilla.mozilla.org/show_bug.cgi?id=393716 and adapt taboo
+to use new API.
+
+need visual feedback when you resave/save (animation on the button?)
+
+=======
+
+
+Feedback:
+
+http://groups.google.com/group/taboo-extension/browse_thread/thread/8baa4ffb295697ee 
+- customized right click menu for thumbnails (delete thumbnail,refresh/reload 
+  maybe and open in foreground and background tab options)
+
+http://groups.google.com/group/taboo-extension/browse_thread/thread/2f345e9114f5cdda
+- add comments to taboos
+- searching full text
+
+http://groups.google.com/group/taboo-extension/browse_thread/thread/7ee79de233ba9ffd
+- embed taboos within bookmarks...
+
+https://addons.mozilla.org/en-US/firefox/reviews/reply/13147
+- in grid mode, it would be nice to be able to edit the title of the taboo
+- calendar mode it would be nice if the thumbnails were a little bigger, so you can recognize your taboo faster
+
+This release:
+  undelete link isn't visible any more (deleting in grid)
+  unable to delete from mosaic
+  save/cancel on textarea are at wrong place
+
+Idea from Johan
+- when bookmarking an image (visiting the image url), snapshot to fit the image dimensions, instead of the browser width, with white padding on the right and bottom
