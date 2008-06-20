@@ -16,6 +16,11 @@ body {
   margin-bottom: -30px;
 }
 
+#postheader {
+  clear: both;
+  height: 40px;
+}
+
 #search {
   margin-left: 10px;
   border: 1px solid #aaa;
@@ -88,6 +93,10 @@ a#trash:hover {
 
 /* deletion notification */
 
+.humanMsg {
+  -moz-border-radius: 15px;
+}
+/*
 .infoWrap {
   text-align: center;
   visibility: hidden;
@@ -98,6 +107,7 @@ a#trash:hover {
 }
 
 #undelete {
+  padding-top: 10px;
   width: 250px;
 }
 
@@ -109,6 +119,7 @@ a#trash:hover {
 #undelete div {
   width: 250px;
 }
+*/
 
 /* FOOTER */
 

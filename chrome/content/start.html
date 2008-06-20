@@ -17,22 +17,20 @@
     <title>Taboo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="chrome://browser/content/utilityOverlay.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/jquery-1.2.3.min.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/jquery.dimensions.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/jquery.tooltip.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/jquery.inplace.source.js"></script>
     <script type="text/javascript" src="chrome://taboo/content/dombuilder.js"></script>
 
+    <script type="text/javascript" src="chrome://taboo/content/vendor/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="chrome://taboo/content/vendor/jquery.inplace.source.js"></script>
+    <script type="text/javascript" src="chrome://taboo/content/vendor/humanmsg.js"></script>
+
     <script type="text/javascript" src="chrome://taboo/content/start.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/hoverbox.js"></script>
     <script type="text/javascript" src="chrome://taboo/content/calendar.js"></script>
-    <script type="text/javascript" src="chrome://taboo/content/grid.js"></script>
     <script type="text/javascript" src="chrome://taboo/content/mosaic.js"></script>
+    <script type="text/javascript" src="chrome://taboo/content/grid.js"></script>
     <script type="text/javascript" src="chrome://taboo/content/trash.js"></script>
     <script type="text/javascript" src="chrome://taboo/content/about.js"></script>
 
-    <link rel="stylesheet" href="chrome://taboo/content/jquery.tooltip.css" />
-
+    <link rel="stylesheet" href="chrome://taboo/content/vendor/humanmsg.css" />
     <link rel="stylesheet" href="chrome://taboo/skin/start.css" />
     <link rel="stylesheet" href="chrome://taboo/skin/calendar.css" />
     <link rel="stylesheet" href="chrome://taboo/skin/mosaic.css" />
@@ -40,6 +38,7 @@
     <link rel="stylesheet" href="chrome://taboo/skin/grid.css" />
     <link rel="stylesheet" href="chrome://taboo/skin/trash.css" />
     <link rel="stylesheet" href="chrome://taboo/skin/about.css" />
+
   </head>
   <body>
     <div id="header">
@@ -53,11 +52,13 @@
       </div>
     </div>
 
-    <div id="undelete" class="infoWrap">
+    <div id="postheader"></div>
+
+    <!-- div id="undelete" class="infoWrap">
       <div id="text" class="info">
         <a id="undeleteLink" href="#">Click here to undelete your taboo</a>
       </div>
-    </div>
+    </div -->
 
     <div id="content"></div>
     <div id="prefooter"></div>
