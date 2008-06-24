@@ -89,7 +89,7 @@ function Grid(container, footerControls) {
     };
 
     box.onclick = function(event) {
-      if (event.originalTarget.className == 'delete') {
+      if (event.originalTarget.className == 'delete nohue') {
         controller.tabDelete(tab, box);
       }
       else {
