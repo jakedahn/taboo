@@ -45,9 +45,9 @@ function Grid(container, footerControls) {
     setSize(size-25);
   }
 
-  footerControls.appendChild(BUTTON({onclick: zoomOut}, 'zoom out'));
-  footerControls.appendChild(BUTTON({onclick: zoomIn}, 'zoom in'));
-
+  footerControls.appendChild(A({'class': 'zoomIn', onclick: zoomIn}));
+  footerControls.appendChild(A({'class': 'zoomOut', onclick: zoomOut}));
+  
   var ul = UL();
   container.appendChild(ul);
 

@@ -127,3 +127,44 @@ body {
 .grid #content li .delete:hover {
   background: transparent url("close.png") bottom no-repeat;
 }
+
+/* footer zoom controls */
+
+
+#footer-controls {
+  float: right;
+  margin-right: 6%;
+}
+
+a.zoomIn {
+  width: 65px;
+  height: 27px;
+  background: url('zoomin.png');
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+a.zoomIn:hover {
+  background-position: center left;
+}
+a.zoomIn:active {
+  background-position: bottom left;
+  border: none !important;
+}
+
+a.zoomOut {
+  width: 71px;
+  height: 27px;
+  background: url('zoomout.png');
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+a.zoomOut:hover {
+  background-position: center left;
+}
+a.zoomOut:active {
+  background-position: bottom left;
+}
+
+

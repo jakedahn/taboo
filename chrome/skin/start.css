@@ -13,12 +13,11 @@ body {
   padding: 0;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: -30px;
 }
 
 #postheader {
   clear: both;
-  height: 40px;
+  height: 10px;
 }
 
 #search {
@@ -39,8 +38,6 @@ body {
   float: left;
 }
 
-a#grid img {border: none !important;}
-
 a#grid {
   background: url("grid.png") top;
   width: 44px !important;
@@ -48,8 +45,12 @@ a#grid {
   display: block;
 }
 a#grid:hover {
+  background-position: center;
+}
+a#grid:active {
   background-position: bottom;
 }
+
 
 a#mosaic{
   background: url("mosaic.png") top;
@@ -58,6 +59,9 @@ a#mosaic{
   display: block;
 }
 a#mosaic:hover {
+  background-position: center;
+}
+a#mosaic:active {
   background-position: bottom;
 }
 
@@ -68,6 +72,9 @@ a#calendar{
   display: block;
 }
 a#calendar:hover {
+  background-position: center;
+}
+a#calendar:active {
   background-position: bottom;
 }
 
@@ -78,6 +85,9 @@ a#about{
   display: block;
 }
 a#about:hover {
+  background-position: center;
+}
+a#about:active {
   background-position: bottom;
 }
 
@@ -131,16 +141,11 @@ a#trash:hover {
 #footer {
   position: fixed;
   z-index: 1000;
-  background: #ccc;
+  background: #9b2133;
   padding: 7px 10px;
   width: 100%;
-  border-top: 1px solid #888;
+  border-top: 1px solid #f33450;
   bottom: 0;
-}
-
-#footer-controls {
-  float: right;
-  margin-right: 20px;
 }
 
 #footer .button {
@@ -155,4 +160,18 @@ a#trash:hover {
 
 #footer .button:hover {
   color: #f80;
+}
+
+a#feedback {
+  width: 293px;
+  height: 27px;
+  display: block;
+  background: url('feedback.png');
+  margin-left: 4%;
+}
+a#feedback:hover {
+  background-position: center;
+}
+a#feedback:active {
+  background-position: bottom;
 }
