@@ -1,5 +1,0 @@
-<?xml-stylesheet href="chrome://taboo/skin/overlay.css"?>
-
-<overlay id="TabooOverlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-</overlay>
