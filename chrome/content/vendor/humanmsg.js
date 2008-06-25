@@ -24,7 +24,7 @@ var humanMsg = {
 			humanMsg.msgOpacity = parseFloat(msgOpacity);
 
 		// Inject the message structure
-		jQuery(appendTo).append('<div id="'+humanMsg.msgID+'" class="humanMsg"><div class="round"></div><p></p><div class="round"></div></div> <!--div id="'+humanMsg.logID+'"><p>'+logName+'</p><ul></ul></div -->')
+		jQuery(appendTo).append('<div id="'+humanMsg.msgID+'" class="humanMsg"><div class="round"></div><p></p><div class="round"></div></div> <div id="'+humanMsg.logID+'"><p>'+logName+'</p><ul></ul></div>')
 		
 		jQuery('#'+humanMsg.logID+' p').click(
 			function() { jQuery(this).siblings('ul').slideToggle() }
@@ -44,20 +44,24 @@ var humanMsg = {
 		jQuery('#'+humanMsg.msgID+'').show().animate({ opacity: humanMsg.msgOpacity}, 200, function() {
 			jQuery('#'+humanMsg.logID)
 				.show().children('ul').prepend('<li>'+msg+'</li>')	// Prepend message to log
-				.children('li:first').slideDown(200)				// Slide it down
+				.children('li').slideDown(500)				// Slide it down
+        .click(function() { humanMsg.removeLogMsg(this); })
 		
 			if ( jQuery('#'+humanMsg.logID+' ul').css('display') == 'none') {
-				jQuery('#'+humanMsg.logID+' p').animate({ bottom: 40 }, 200, 'linear', function() {
-					jQuery(this).animate({ bottom: 0 }, 300, 'easeOutBounce', function() { jQuery(this).css({ bottom: 0 }) })
+				jQuery('#'+humanMsg.logID+' p').animate({ height: 70 }, 200, 'linear', function() {
+					jQuery(this).animate({ height: 20 }, 300, 'easeOutBounce', 
+                               function() { 
+                                 jQuery(this).css({ height: 20 }) 
+                               })
 				})
 			}
 			
 		})
 
-		// Watch for mouse & keyboard in .5s
-		humanMsg.t1 = setTimeout("humanMsg.bindEvents()", 700)
-		// Remove message after 5s
-		humanMsg.t2 = setTimeout("humanMsg.removeMsg()", 5000)
+		// Watch for mouse & keyboard in .7s
+		humanMsg.t1 = setTimeout(humanMsg.bindEvents, 700)
+		// Remove message after 10s
+		humanMsg.t2 = setTimeout(humanMsg.removeMsg, 10000)
 	},
 
 	bindEvents: function() {
@@ -78,7 +82,12 @@ var humanMsg = {
 		// If message is fully transparent, fade it out
 		if (jQuery('#'+humanMsg.msgID).css('opacity') == humanMsg.msgOpacity)
 			jQuery('#'+humanMsg.msgID).animate({ opacity: 0 }, 500, function() { jQuery(this).hide() })
-	}
+	},
+
+  removeLogMsg: function(msg) {
+    console.log('removeLogMsg', msg);
+    jQuery(msg).remove();
+  }
 };
 
 jQuery(document).ready(function(){

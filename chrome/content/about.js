@@ -16,9 +16,10 @@ function About(container) {
 
   var div = document.createElement('div');
   container.appendChild(div);
-  div.innerHTML = '<iframe src="about.html" style="width: 100%; height: 1200px; border: 0;" />';
+  div.innerHTML = '<iframe src="about.html" style="width: 100%; height: 600px; border: 0;" />';
 
   this.start = function() {}
   this.finish = function() {}
   this.add = function(tab) {}
+  this.info = true;
 }
