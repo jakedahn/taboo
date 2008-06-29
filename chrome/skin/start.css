@@ -1,6 +1,6 @@
 body {
   background: #eee;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "MS Trebuchet", sans-serif;
   margin: 0;
   padding: 0;
   overflow: -moz-scrollbars-vertical;
@@ -34,13 +34,27 @@ body {
 }
 
 #views a {
+  font-family: "MS Trebuchet", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
   padding: 0;
   float: left;
+  text-shadow: 2px 2px 2px #000;
+  
+}
+
+span.navlink {
+  background: url("seperator.png") right no-repeat;
+  height: 27px;
+  display: block;
+  margin-top: -7px;
+  padding: 13px 10px 0 10px;
 }
 
 a#grid {
-  background: url("grid.png") top;
-  width: 44px !important;
+  background: url("grid.png") top no-repeat;
   height: 27px !important;
   display: block;
 }
@@ -53,8 +67,7 @@ a#grid:active {
 
 
 a#mosaic{
-  background: url("mosaic.png") top;
-  width: 55px !important;
+  background: url("buttonbg.png") top;
   height: 27px !important;
   display: block;
 }
@@ -66,8 +79,7 @@ a#mosaic:active {
 }
 
 a#calendar{
-  background: url("calendar.png") top;
-  width: 70px !important;
+  background: url("buttonbg.png") top;
   height: 27px !important;
   display: block;
 }
@@ -79,11 +91,17 @@ a#calendar:active {
 }
 
 a#about{
-  background: url("about.png") top;
-  width: 50px !important;
+  background: url("about.png") top no-repeat;
+  width: 48px !important;
   height: 27px !important;
   display: block;
 }
+
+a#about .navlink {
+  background: none !important;
+  padding-left: 5px !important;
+}
+
 a#about:hover {
   background-position: center;
 }
@@ -163,11 +181,14 @@ a#trash:hover {
 }
 
 a#feedback {
-  width: 293px;
-  height: 27px;
-  display: block;
-  background: url('feedback.png');
-  margin-left: 4%;
+  font-family: "MS Trebuchet", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+  float: left;
+  
 }
 a#feedback:hover {
   background-position: center;
