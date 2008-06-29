@@ -537,6 +537,9 @@ TabooService.prototype = {
   getRecent: function TB_getRecent(aMaxRecent) {
     return this._tabEnumerator(this._storage.getURLs(null, false, aMaxRecent));
   },
+  getForURL: function TB_getForURL(aURL) {
+    return this._storage.retrieve(aURL);
+  },
 
   _tabEnumerator: function TB__tabEnumerator(aURLs) {
     return {
@@ -564,7 +567,17 @@ TabooService.prototype = {
       .getService(Ci.nsIWindowMediator);
     var win = wm.getMostRecentWindow('navigator:browser');
 
-    var loadInBackground = getBoolPref("browser.tabs.loadBookmarksInBackground", false);
+    var loadInBackground = getBoolPref("browser.tabs.loadInBackground", true);
+
+    if (aWhere == 'tabforeground') {
+      loadInBackground = false;
+      aWhere = 'tab';
+    }
+
+    if (aWhere == 'tabbackground') {
+      loadInBackground = true;
+      aWhere = 'tab';
+    }
 
     var tabbrowser = win.getBrowser();
 
