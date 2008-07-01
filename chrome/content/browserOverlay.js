@@ -24,8 +24,8 @@ function Taboo() {
   this.gotoRecent = function(targetNode, event) {
     event.preventDefault();
     event.stopPropagation();
-    SVC.open(targetNode.getAttribute('url'), whereToOpenLink(event));
-  }
+    SVC.open(targetNode.getAttribute('url'), 'tabforeground');
+  };
 
   this.showRecentList = function(domId) {
     var popup = $(domId);
@@ -58,6 +58,18 @@ function Taboo() {
       item.setAttribute('label', 'No Tabs Saved');
       item.setAttribute('disabled', true);
       popup.appendChild(item);
+    }
+  };
+
+  this.toggleTaboo = function(event) {
+    var url = gBrowser.selectedBrowser.webNavigation.currentURI.spec.replace(/#.*/, '');
+
+    if (SVC.isSaved(url)) {
+      SVC.delete(url);
+      saved(false);
+    } else {
+      SVC.save(null);
+      saved(true);
     }
   };
 
