@@ -1,3 +1,20 @@
+body {
+    background: #cb374d !important;
+    font-family: "MS Trebuchet", sans-serif;
+}
+
+#content {
+  width: 90%;
+  margin: 0 auto;
+  background: #ffffff;
+  -moz-border-radius-bottomleft: 50px;
+  -moz-border-radius-topright: 50px;  
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
+
 /* setup the grid */
 
 .grid #content ul {
@@ -59,28 +76,30 @@
 .grid #content li span.url {
   display:block;
   overflow: hidden;
-  font-size: 11px;
-  color: #08f;
+  font-size: 12px;
+  font-weight: bold;
+  color: #cb1530;
   text-decoration: underline;
   white-space: nowrap;
 }
 
 .grid #content li {
-  margin: 5px;
-  padding: 5px;
-  -moz-border-radius: 10px;
-  border: 1px solid #e8e8e8;
-  background: #f8f8f8;
-  cursor: pointer;
+  background: #f6f6f6;
+  border: 1px solid #e5e5e5;
   color: #333;
-  position: relative;
+  margin: 10px;
+  padding: 5px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-topright: 10px;
+  cursor: pointer;
+  position: relative;  
 }
 
 /* Handle hover over the grid item */
 
 .grid #content li:hover {
   border-color: #ddd;
-  background: #fff;
+  background: #efeeee;
   color: black;
 }
 
@@ -93,11 +112,12 @@
 .grid #content li .delete {
   display: none;
   background: transparent url("close.png") top no-repeat;
-  width: 14px !important;
-  height: 14px !important;
+  width: 43px !important;
+  height: 37px !important;
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -20px;
+  left: -20px;
+
 }
 
 .grid #content li:hover .delete {
@@ -107,4 +127,44 @@
 .grid #content li .delete:hover {
   background: transparent url("close.png") bottom no-repeat;
 }
+
+/* footer zoom controls */
+
+
+#footer-controls {
+  float: right;
+  margin-right: 6%;
+}
+
+a.zoomIn {
+  width: 65px;
+  height: 27px;
+  background: url('zoomin.png');
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+a.zoomIn:hover {
+  background-position: center left;
+}
+a.zoomIn:active {
+  background-position: bottom left;
+  border: none !important;
+}
+
+a.zoomOut {
+  width: 71px;
+  height: 27px;
+  background: url('zoomout.png');
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+a.zoomOut:hover {
+  background-position: center left;
+}
+a.zoomOut:active {
+  background-position: bottom left;
+}
+
 
