@@ -180,7 +180,7 @@ function snapshot(win, outputWidth, outputHeight) {
 
 function cleanTabState(aState, aClearPrivateData) {
   var sandbox = new Cu.Sandbox('about:blank');
-  var tabState = Cu.evalInSandbox(aState, sandbox);
+  var tabState = Cu.evalInSandbox('('+aState+')', sandbox);
 
   var index = (tabState.index ? tabState.index : tabState.entries.length) - 1;
   var entry = tabState.entries[index];
@@ -194,7 +194,9 @@ function cleanTabState(aState, aClearPrivateData) {
     deletePrivateData(entry);
 
     if (entry.children) {
-      entry.children.forEach(deletePrivateData);
+      for (var i=0; i<entry.children.length; i++) {
+        deletePrivateData(entry.children[i]);
+      }
     }
   }
 
@@ -585,6 +587,21 @@ TabooService.prototype = {
     if (index != -1) {
       this._observers.splice(index, 1);
     }
+  },
+
+  saveAll: function TB_saveAll() {
+    var wm = Cc["@mozilla.org/appshell/window-mediator;1"]
+      .getService(Ci.nsIWindowMediator);
+    var window = wm.getMostRecentWindow('navigator:browser');
+
+    var tabbrowser = window.getBrowser();
+
+    var browsers = tabbrowser.browsers;
+    for (var i = 0; i < browsers.length; i++) {
+      var win = browsers[i].contentWindow;
+
+    }
+
   },
 
   save: function TB_save(aDescription) {

@@ -89,7 +89,7 @@ function Controller() {
   };
 
   this.load = function(view_name) {
-    var ViewClass = top[view_name];
+    var ViewClass = window.top[view_name];
 
     content.innerHTML = '';
     footerControls.innerHTML = '';
@@ -122,8 +122,7 @@ function Controller() {
     SVC.delete(tab.url);
   }
 
-  this.tabFinalDelete = function(tab, el) {
-    humanMsg.displayMsg("This taboo has been permanently deleted.");
+  this.tabFinalDelete = function(tab) {
     SVC.reallyDelete(tab.url);
   }
 
