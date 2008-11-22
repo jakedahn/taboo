@@ -14,9 +14,10 @@ body {
   margin: 0 auto;
   margin-top: 10px;
 }
+
 #postheader {
   clear: both;
-  height: 40px;
+  height: 10px;
 }
 
 #search {
@@ -32,17 +33,27 @@ body {
 }
 
 #views a {
-  border: 1px solid #aaa;
+  font-family: "MS Trebuchet", sans-serif;
+  color: #ffffff;
   text-decoration: none;
-  color: #08f;
-  background: white;
-  padding: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+  float: left;
+  text-shadow: 2px 2px 2px #000;
+  
 }
+
+
 
 #views a:hover {
   border-color: #888;
   color: #f80;
 }
+
+
+
+
 
 .grid #grid,
 .trash #trash,
