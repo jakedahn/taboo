@@ -47,17 +47,18 @@
 
   </head>
   <body>
+    
     <div id="header">
+      <img id="logo" src="chrome://taboo/skin/logolarge.png" />
       <div id="views">
-        <a href="#" onclick="controller.load('Grid'); return false;" id="grid">grid</a>
-        <a href="#" onclick="controller.load('Calendar'); return false;" id="calendar">calendar</a>
-        <a href="#" onclick="controller.load('Mosaic'); return false;" id="mosaic">details</a>
-        <a href="#" onclick="controller.load('Trash'); return false;" id="trash">trashcan</a>
-        <a style="display:none" href="#" onclick="controller.load('Tools'); return false;" id="tools">tools</a>
-        <a href="#" onclick="controller.load('About'); return false;" id="about">about</a>
+        <a href="#" onclick="controller.load('Grid'); return false;" id="grid"><span class="navlink">Grid</span></a>
+        <a href="#" onclick="controller.load('Calendar'); return false;" id="calendar"><span class="navlink">Calendar</span></a>
+        <a href="#" onclick="controller.load('Mosaic'); return false;" id="mosaic"><span class="navlink">Details</span></a>
+        <a href="#" onclick="controller.load('About'); return false;" id="about"><span class="navlink">About</span></a>
+        <a href="#" onclick="controller.load('Trash'); return false;" id="trash"></a>
       </div>
-      <input type="text" id="search" />
     </div>
+
 
     <div id="postheader"></div>
 
