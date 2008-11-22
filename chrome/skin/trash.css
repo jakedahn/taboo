@@ -1,0 +1,83 @@
+/* handle the trash of deleted taboos */
+
+.trash #content ul {
+  padding: 0 5px;
+  list-style: none;
+}
+
+.trash #content li {
+  float: left;
+  display: block;
+}
+
+.trash #content li div {
+  overflow: hidden;
+}
+
+.trash #content li div { width: 125px; height: 123px; }
+
+.trash #content .preview img {
+  width: 100%;
+}
+
+.trash #content li span.title {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  display: block;
+  white-space: nowrap;
+}
+
+.trash #content li span.url {
+  display:block;
+  overflow: hidden;
+  font-size: 11px;
+  color: #08f;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.trash #content li {
+  margin: 5px;
+  padding: 5px;
+  -moz-border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  background: #f8f8f8;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+
+/* Handle hover over the trash item */
+
+.trash #content li:hover {
+  border-color: #ddd;
+  background: #fff;
+  color: black;
+}
+
+.trash #content li:hover .url {
+  color: #f80;
+}
+
+/* display the delete buttom */
+
+.trash #content li .delete {
+  display: none;
+  background: transparent url("close.png") top no-repeat;
+  width: 14px !important;
+  height: 14px !important;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.trash #content li:hover .delete {
+  display: inherit;
+}
+
+.trash #content li .delete:hover {
+  background: transparent url("close.png") bottom no-repeat;
+}
+
